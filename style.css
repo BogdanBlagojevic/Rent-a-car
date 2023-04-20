@@ -123,7 +123,7 @@ header{
  
 }
 
-/*RIDE*/
+/*RENT*/
 
 .heading{
     text-align:center;
@@ -136,30 +136,30 @@ header{
 .heading h1{
     font-size: 32px;
 }
-.ride-container{
+.rent-container{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit,minmax(250px,auto));
     gap: 16px;
     margin-top: 32px;
 }
-.ride-container .box{
+.rent-container .box{
     text-align: center;
     padding: 20px;
 }
-.ride-container .box .bx{
+.rent-container .box .bx{
     font-size:34px;
     padding: 10px;
     background-color: #eeeff1;
     border-radius: 8px;
     color: var(--main-color);
 }
-.ride-container .box h2{
+.rent-container .box h2{
     font-size: 20px;
     font-weight: 500;
     margin: 1.4rem 0 0.5rem;
 }
-.ride-container .box .bx:hover, .ride-container .bx .bxs-car{
+.rent-container .box .bx:hover, .rent-container .bx .bxs-car{
     background:var(--gradient);
     color: #fff;
 }
