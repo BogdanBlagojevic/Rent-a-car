@@ -27,14 +27,69 @@
      <!-- Home-->
     <section class="home" id="home">
         <div class="text">
+            <h1 class="dobodosli"></h1>
             <h1><span>Rent</span>   a Car</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Lorem ipsum dolor sit amet consectetur.</p>
             <div class="app-stores">
-                <button>Register</button>
-                <button>Sign in</button>
+                <button class="btnRegister">Register</button>
+                <button class="btnLogin">Sign in</button>
             </div>
         </div>
         </div>
+   <!-- Login-->
+   <div class="wrapper">
+    <span class="icon-close"><i class='bx bx-x'></i></span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-envelope'></i></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-lock' ></i></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Login</button>   
+            <div class="login-register">
+                <p> Dont have an account?
+                    <a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+     <!-- Register-->
+    <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-user'></i></span>
+                <input id="user" type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-envelope'></i></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-lock' ></i></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btnR">Register</button>   
+            <div class="login-register">
+                <p>Already have an account?
+                    <a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+   <!-- Login end-->
+
+
+  
     </section>
          <!-- Rent-->
       <section class="rent" id="rent">
@@ -165,6 +220,6 @@
           </div>
 
             <!-- JS link-->
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
