@@ -201,6 +201,14 @@ header{
     border-radius: 8px;
     margin: 16px 0 16px;
 }
+.services-container .box h4{
+  font-weight: 400;
+  color: var(--text-color);
+}
+.services-container .box h4 span{
+    color: var(--main-color);
+    font-weight: 400;
+  }
 .services-container .box h3{
     font-weight: 500;
 }
@@ -407,12 +415,13 @@ header{
   transition: .5s;
   overflow: hidden;
   display: none;
+  margin-top: 50px;
 }
 .wrapper.active-popup{
     transform: scale(1);
 }
 .wrapper.active{
-    height: 520px;
+    height: 620px;
   
 }
 .wrapper .form-box{
@@ -548,4 +557,5 @@ header{
         width: 90%;
     }
 }
+
 
