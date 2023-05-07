@@ -47,7 +47,7 @@ namespace Rent_A_Car.Models
             builder.Entity<Reservation>()
                 .HasData(
                     new Reservation { Id = 1, AppUserId = 3, CarId = 2, DateOfPickup = new DateTime(2023, 06, 05, 13, 30, 0), DateOfReturn = new DateTime(2023, 08, 05, 13, 30, 0), TotalPrice = 200 },
-                    new Reservation { Id = 2, AppUserId = 5, CarId = 1, DateOfPickup = new DateTime(2023, 11, 10, 17, 0, 0), DateOfReturn = new DateTime(2023, 11, 15, 17, 0, 0), TotalPrice = 600},
+                    new Reservation { Id = 2, AppUserId = 5, CarId = 1, DateOfPickup = new DateTime(2023, 11, 10, 17, 0, 0), DateOfReturn = new DateTime(2023, 11, 15, 17, 0, 0), TotalPrice = 600 },
                     new Reservation { Id = 3, AppUserId = 1, CarId = 4, DateOfPickup = new DateTime(2023, 07, 05, 11, 15, 0), DateOfReturn = new DateTime(2023, 07, 11, 11, 15, 0), TotalPrice = 540 }
                 );
         }

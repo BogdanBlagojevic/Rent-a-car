@@ -10,8 +10,8 @@ using Rent_A_Car.Models;
 namespace Rent_A_Car.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230506150508_Second-Migration")]
-    partial class SecondMigration
+    [Migration("20230507150653_Second-Mig")]
+    partial class SecondMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -353,7 +353,7 @@ namespace Rent_A_Car.Migrations
                     b.Property<DateTime>("DateOfReturn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TotalPrice")
+                    b.Property<int?>("TotalPrice")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

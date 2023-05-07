@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Rent_A_Car.Migrations
 {
-    public partial class SecondMigration : Migration
+    public partial class SecondMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,7 @@ namespace Rent_A_Car.Migrations
                     CarId = table.Column<int>(type: "int", nullable: false),
                     DateOfPickup = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateOfReturn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TotalPrice = table.Column<int>(type: "int", nullable: false)
+                    TotalPrice = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
