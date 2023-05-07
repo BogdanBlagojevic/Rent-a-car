@@ -38,7 +38,8 @@ namespace Rent_A_Car
 
             var admin = new AppUser
             {
-                UserName = "CodeMaster"
+                UserName = "CodeMaster",
+                Email = "CodeM22@Gmail.com"
             };
             await userManager.CreateAsync(admin, "Milo$1999");
             await userManager.AddToRoleAsync(admin, "Admin");

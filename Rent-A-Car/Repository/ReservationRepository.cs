@@ -28,13 +28,10 @@ namespace Rent_A_Car.Repository
 
         public void Create(Reservation res)
         {
-            /*int days = (int)(res.DateOfReturn - res.DateOfPickup).TotalDays;
-            Car car = _context.Cars.FirstOrDefault(c => c.Id == carId);
-            res.TotalPrice = car.Price * days;*/
             _context.Reservations.Add(res);
-            foreach(Car car in _context.Cars)
+            foreach (Car car in _context.Cars)
             {
-                if(car.Id == res.CarId)
+                if (car.Id == res.CarId)
                 {
                     res.TotalPrice = (int)(res.DateOfReturn - res.DateOfPickup).TotalDays * car.Price;
                 }
@@ -72,7 +69,7 @@ namespace Rent_A_Car.Repository
         }
         public IQueryable<Reservation> FilterByTotalPrice(ReservationTotalPriceDTO dto)
         {
-            return _context.Reservations.Where(c => c.TotalPrice >= dto.Min && c.TotalPrice <= dto.Max );
+            return _context.Reservations.Where(c => c.TotalPrice >= dto.Min && c.TotalPrice <= dto.Max);
         }
 
     }

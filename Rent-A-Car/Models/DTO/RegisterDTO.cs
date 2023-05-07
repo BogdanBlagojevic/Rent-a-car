@@ -8,6 +8,8 @@ namespace Rent_A_Car.Models.DTO
         [Required]
         public string Username { get; set; }
         [Required]
+        public string Email { get; set; }
+        [Required]
         [StringLength(12, MinimumLength = 8)]
         public string Password { get; set; }
         [Required]

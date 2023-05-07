@@ -27,11 +27,12 @@ namespace Rent_A_Car.Controllers
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO regDTO)
         {
             if (await UserExistsUsername(regDTO.Username)) return BadRequest("Username already exists.");
-            //if (await UserExistsEmail(regDTO.Email)) return BadRequest("Account with that Email already exists.");
+            if (await UserExistsEmail(regDTO.Email)) return BadRequest("Account with that Email already exists.");
 
             var user = new AppUser
             {
                 UserName = regDTO.Username,
+                Email = regDTO.Email,
                 Name = regDTO.Name,
                 Surname = regDTO.Surname,
                 
@@ -48,6 +49,7 @@ namespace Rent_A_Car.Controllers
             return new UserDTO
             {
                 Username = user.UserName,
+                Email = user.Email,
                 Token = await _tokenService.CreateToken(user),
                 Name = user.Name,
                 Surname = user.Surname,
@@ -57,7 +59,7 @@ namespace Rent_A_Car.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
-            var user = await _userManager.Users.SingleOrDefaultAsync(x => x.UserName == loginDTO.Username);
+            var user = await _userManager.Users.SingleOrDefaultAsync(x => x.Email == loginDTO.Email);
 
             if (user == null) return Unauthorized("Invalid username");
 
@@ -68,6 +70,7 @@ namespace Rent_A_Car.Controllers
             return new UserDTO
             {
                 Username = user.UserName,
+                Email = user.Email,
                 Token = await _tokenService.CreateToken(user),
                 Name = user.Name,
                 Surname = user.Surname,
@@ -79,9 +82,9 @@ namespace Rent_A_Car.Controllers
             return await _userManager.Users.AnyAsync(x => x.UserName == username);
         }
 
-        /*private async Task<bool> UserExistsEmail(string email)
+        private async Task<bool> UserExistsEmail(string email)
         {
             return await _userManager.Users.AnyAsync(x => x.Email == email);
-        }*/
+        }
     }
 }

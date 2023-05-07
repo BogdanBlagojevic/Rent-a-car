@@ -351,7 +351,7 @@ namespace Rent_A_Car.Migrations
                     b.Property<DateTime>("DateOfReturn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TotalPrice")
+                    b.Property<int?>("TotalPrice")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
